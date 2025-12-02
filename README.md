@@ -1,4 +1,7 @@
-This is a Windows Batch Script designed to simplify the connection and launch of the scrcpy screen mirroring tool, primarily focusing on automated Wi-Fi connections.
+This is a Windows Batch Script designed to simplify the connection and launch of the scrcpy screen mirroring tool
+https://github.com/Genymobile/scrcpy
+
+this script primarily focusing on automated Wi-Fi connections.
 
 ✨ Features
 Automated Connection: Easily connect your Android device using ADB.
