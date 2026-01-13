@@ -147,6 +147,13 @@ Both files are created in the same directory as the script.
 - Accept "Allow USB debugging" dialog
 - Check "Always allow from this computer" for convenience
 
+## To-Do's 📝
+- Add silent options.
+- Close/Hide New Popup windows.
+- Add connection flag/trigger.. title adjustment.
+- Improve Menu and Controls.
+- Make Gui or atleast add colors.
+- Enhanced User Menu Prefrences.
 ---
 
 ## 🔄 Update History
