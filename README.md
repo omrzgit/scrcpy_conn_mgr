@@ -2,8 +2,8 @@
 A simple yet powerful Windows Batch Script designed to simplify connecting and launching of [scrcpy](https://github.com/Genymobile/scrcpy); the powerful Android screen mirroring tool. This manager improves ease of usage for auto connection handling, multiple IP management, and extensive troubleshooting capabilities.
 Will PR to contribute with original project when it has matured here a little more.
 
-## ✨ Key Features
-### 🔌 Smart Connection Management
+## Key Features
+### Smart Connection Management
 - **Multiple IP Storage**: Save and manage multiple device IP addresses
 - **Automatic Connection**: Attempts all saved IPs automatically on startup
 - **Smart Prioritization**: Most recently used/successful IPs are tried first
@@ -13,14 +13,14 @@ Will PR to contribute with original project when it has matured here a little mo
   - **USB Cable**: Direct connection via USB (scrcpy -d)
   - **New IP Setup**: Add and immediately connect to new devices
 
-### 🛠️ Advanced IP Management
+### Advanced IP Management
 - **Multi-IP Support**: Store unlimited device IP addresses
 - **Add/Remove IPs**: Easy management interface with confirmation prompts
 - **Duplicate Detection**: Prevents saving the same IP twice
 - **Auto-Reordering**: Successfully connected IPs move to top priority
 - **IP Validation**: Basic format checking before saving
 
-### 🔧 Robust Error Handling & Recovery
+### Robust Error Handling & Recovery
 - **Automatic Troubleshooting**: 
   - Direct connection attempt
   - ADB server restart
@@ -31,7 +31,7 @@ Will PR to contribute with original project when it has matured here a little mo
 - **Network Diagnostics**: Step-by-step guidance for connection issues
 - **Multiple Retry Options**: Never get stuck - always have a way forward
 
-### 💡 Enhanced User Experience
+### Enhanced User Experience
 - **Welcome Screen**: Clear program explanation on startup
 - **Intuitive Prompts**: Plain language instead of cryptic codes
 - **Flexible Input**: Accepts Y/N, Yes/No, or 1/0
@@ -39,7 +39,7 @@ Will PR to contribute with original project when it has matured here a little mo
 - **Professional Formatting**: Clean interface with section dividers
 - **Portable**: Uses current directory - works from any location
 
-## ⚙️ How It Works
+## How It Works
 
 1. **Startup Check**: Looks for `lastip.txt` with saved IP addresses
 2. **Auto-Connect Option**: Asks if you want to automatically try all saved IPs
@@ -88,7 +88,7 @@ All connections use optimized settings:
    - Script will automatically attempt saved IPs
    - Or choose manual mode for more control
 
-## 🎮 Usage Guide
+## Usage Guide
 
 ### Main Menu Options
 - **1** - Auto-try all saved IPs
@@ -111,14 +111,14 @@ All connections use optimized settings:
 - Selected IPs automatically move to top priority
 - USB connection works as emergency fallback
 
-## 📁 Files Created
+## Files Created
 
 - `lastip.txt`: Stores all saved IP addresses (one per line, most recent first)
 - `temp_ips.txt`: Temporary file used during IP reordering (auto-deleted)
 
 Both files are created in the same directory as the script.
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### "ADB not found in PATH"
 - Ensure Android SDK Platform Tools are installed
@@ -156,7 +156,7 @@ Both files are created in the same directory as the script.
 - Enhanced User Menu Prefrences.
 ---
 
-## 🔄 Update History
+## Update History
 
 ### v3.4 - Smart IP Ordering (Current)
 - **Selected IP moves to top of list** - "Most Recently Used" ordering
@@ -252,7 +252,7 @@ Both files are created in the same directory as the script.
 **Bug Fixes:**
 - Fixed: Title never changed to "Connected" - now uses `start /wait` with proper error level checking
 
-## 📝 Notes
+## Notes
 
 - The script maintains IP order based on successful connections
 - Most recently used IPs are tried first for faster connections
@@ -260,15 +260,15 @@ Both files are created in the same directory as the script.
 - The script never gets stuck - there's always an option to proceed
 - USB mode works even if all wireless connections fail
 
-## 🤝 Contributing
+## Contributing
 
 This project is still maturing. Contributions, suggestions, and bug reports are welcome!
 
 
-## 📄 License
+## License
 Free to use and modify. If you improve it, consider sharing your enhancements!
 
-## 🔗 Related Links
+## Related Links
 [scrcpy GitHub](https://github.com/Genymobile/scrcpy)
 [Android SDK Platform Tools](https://developer.android.com/studio/releases/platform-tools)
 [ADB Documentation](https://developer.android.com/studio/command-line/adb)
