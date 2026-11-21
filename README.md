@@ -148,17 +148,43 @@ Both files are created in the same directory as the script.
 - Check "Always allow from this computer" for convenience
 
 ## To-Do's 📝
-- Add silent options.
-- Close/Hide New Popup windows.
-- Add connection flag/trigger.. title adjustment.
-- Improve Menu and Controls.
-- Make Gui or atleast add colors.
-- Enhanced User Menu Prefrences.
+- [x] Add silent options & background hiding.
+- [x] Close/Hide New Popup windows (run scrcpy directly in hidden host).
+- [x] Add connection flag/trigger & consistent title adjustment.
+- [x] Improve Menu and Controls (Device Aliases, Quick Presets, Reconnect).
+- [x] Android 11+ Wireless Debugging Pairing Wizard.
+- [ ] Make GUI (C# .NET WPF / Python CustomTkinter) or rich color schemes.
 ---
 
 ## Update History
 
-### v3.4 - Smart IP Ordering (Current)
+### v4.0 - Android 11+ Pairing, Aliases, Presets & Smart Window Management (Current)
+- **Android 11+ Wireless Debugging Architecture**:
+  - Full support for Android 11+ dynamic Pairing Ports and 6-digit codes.
+  - Distinct handling for Pairing Port vs Connection Port.
+  - Wizard detects existing paired state ("Already Paired" vs "First-time Setup") so users don't get trapped in repeated pairing errors.
+  - Port range verification (1-65535), numeric validation, and explicit confirmation prompts before running `adb pair`.
+- **Device Aliases / Nicknames**:
+  - Stored in delimiter-safe 4-field format (`IP|TIMESTAMP|MARKER|ALIAS`) in `lastip.txt`.
+  - Automatic migration of legacy 2-field and 3-field files on startup.
+  - Display nicknames in all menus (e.g., `192.168.18.27 (Omer Phone) [2026-11-21] *`).
+  - Added Option `[R]` in `:manageips` to set, change, or clear nicknames.
+- **Quick Resolution & Quality Presets**:
+  - Instant resolution toggle (Option `5`):
+    - `[1] 1080p Balanced`: `--video-codec=h264 --max-size=1080` (Default)
+    - `[2] 720p Low Latency`: `--video-codec=h264 --max-size=720 --video-bit-rate=4M --max-fps=30`
+    - `[3] 480p High Speed`: `--video-codec=h264 --max-size=480 --video-bit-rate=2M --max-fps=30`
+    - `[4] Native / Uncapped`: Maximum native fidelity
+- **Zero-Taskbar Hiding & Clean Desktop Mirroring**:
+  - Eliminates secondary console popup windows: runs `scrcpy` directly inside the existing hidden console, displaying **only** the phone mirror window.
+  - Zero-taskbar hiding via NirCmd `win hide` (`ShowWindow(SW_HIDE)`).
+  - Automatically pops back into the foreground when the scrcpy session ends with `SESSION ENDED` menu ready for user input.
+- **Multi-Device Disambiguation & Self-Healing**:
+  - Always launches scrcpy with explicit serial target `-s <device>` to prevent `ERROR: Multiple (2) ADB devices` crashes.
+  - Preemptively evicts stale sockets with `adb disconnect`.
+  - Cleans zombie ADB background processes on daemon restart.
+
+### v3.4 - Smart IP Ordering
 - **Selected IP moves to top of list** - "Most Recently Used" ordering
 - When user manually selects an IP, it moves to position #1
 - Successfully connected IPs automatically move to top

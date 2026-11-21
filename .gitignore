@@ -1,0 +1,29 @@
+# scrcpy_conn_mgr .gitignore
+
+# Saved device IP configurations & state (contains local network info)
+lastip.txt
+temp*.txt
+*.tmp
+
+# Logs and debugging output
+*.log
+
+# Third-party binaries & scrcpy/adb packages (users should install directly)
+*.exe
+*.dll
+scrcpy-server
+scrcpy-*-win64/
+platform-tools/
+
+# Backups and archives
+*.zip
+*.tar.gz
+*.bak
+backups/
+repo/
+
+# OS / Editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
